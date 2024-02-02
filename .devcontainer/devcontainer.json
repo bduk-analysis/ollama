@@ -54,7 +54,10 @@
 			"extensions": [
 				"ms-toolsai.jupyter",
 				"ms-python.python",
-				"ms-python.black-formatter"
+				"ms-python.black-formatter",
+				"eamodio.gitlens",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	},
