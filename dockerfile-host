@@ -1,0 +1,21 @@
+# Create Docker image to run the executable file
+# Choose a base image that matches the environment the executable was built for
+FROM ubuntu:22.04
+
+# Install any necessary dependencies
+RUN apt-get update && apt-get install -y ca-certificates
+
+# Copy the executable from your local system into the Docker image
+COPY ollama /bin/ollama
+
+# Expose the port the application uses
+EXPOSE 11434
+
+# Set any necessary environment variables
+ENV OLLAMA_HOST 0.0.0.0
+
+# Set the executable as the entrypoint of the Docker container
+ENTRYPOINT ["/bin/ollama"]
+
+# Set the default command for the Docker container
+CMD ["serve"]

@@ -937,7 +937,7 @@ func (s *Server) GenerateRoutes() http.Handler {
 
 	for _, method := range []string{http.MethodGet, http.MethodHead} {
 		r.Handle(method, "/", func(c *gin.Context) {
-			c.String(http.StatusOK, "Ollama is running")
+			c.String(http.StatusOK, "Ollama BDUK is running")
 		})
 
 		r.Handle(method, "/api/tags", ListModelsHandler)
